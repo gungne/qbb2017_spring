@@ -33,19 +33,7 @@ def trace_back(tb_value,s_letter,s_value,t_letter,t_value):
         s_value = s_value-1
         t_value = t_value
     else:
-        if tb_value<0:
-            if t_value==0:
-                s_letter = s_letter
-                t_letter = '-'
-                s_value = s_value-1
-                t_value = t_value
-            elif s_value==0:
-                s_letter = '-'
-                t_letter = t_letter
-                s_value = s_value
-                t_value = t_value-1
-            else:
-                print('warning')
+        print('warning')
             
         
     return s_letter,s_value,t_letter,t_value
@@ -94,10 +82,10 @@ def compute_matrix( s, t ):
     # ...
     for n_count in range(1,n+1):
         dp_matrix[0,n_count] = n_count * -1*gap      
-        tb_matrix[0,n_count] = n_count * -1
+        tb_matrix[0,n_count] = 2
     for m_count in range(1,m+1):
         dp_matrix[m_count,0] = m_count * -1*gap
-        tb_matrix[m_count,0] = m_count * -1    
+        tb_matrix[m_count,0] = 1   
     for n_count in range(1,n+1):
         for m_count in range(1,m+1):
             # print(dp_matrix[np.ix_([m_count-1,m_count],[n_count-1,n_count])])
