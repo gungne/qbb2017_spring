@@ -1,0 +1,21 @@
+Q1.What problems, if any, did you notice in the sequence alignment?
+Most of them have gaps in the beginning, just because one of the sequence has addition peptides.
+
+Q2. Look at both the FASTA and PHYLIP files in a text editor. Write a brief description of each file format.
+Fasta starts with '>', proceed with descriptions and end with sequence for one peptide sequences.
+Phylip puts the alignment in a aligned way. Starts with description and the sequences are aligned in 50 amino acids chucks each section, and recur the section until the end.
+
+Q3.Which model of amino acid substitution did you choose and why?
+LG, It`s the default and a general-applied model for subsitution.
+
+Did you use model-defined or empirical amino acid frequencies in your calculation and why?
+Model defined, as LG model is an empirical model so it won`t make difference theoritically.
+
+Did you use a gamma model of rate heterogeneity? Why? If so, what parameters did you specify?
+Yes. As the rate of substitio may be not fiexed in nature. Estimate, since we have 100 datasets, it should have some confident in giving us accurate parameter from estimation.
+
+Did you specify a proportion of invariant sites or let it be estimated from the data, and why?
+No. From the data, we don`t know if there is some invariant sites for our first run.
+
+Do the groupings appear as you expected or did you find anything unusual? Explain.
+Theoritically the same protein from the same strain should be quite similar. However, in the tree I just generated, it seems that the protein sequences from the same strain are different and even form distinct clades. It could be the protein (glucokinase) is very unstable and varies even in same strain of different location.  
